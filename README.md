@@ -6,6 +6,22 @@ there is some random crash when pressing the actual ingame buttons, i got no ide
 ## how ts works?
 - 1 hook an gameloop (i did it with my polyhook2 wrapper to make simple detour hooks)
 - 2 Call Game Functions Thru That Loop, Works and is great for IL2CPP Games
+
+## Features?
+- ESP
+- Clean & Readable Code
+- Simple SDK
+- easy to expand or skid from
+- Many Cheat Features Ready To be Made, just not executed yet
+
+
+# Stuff Swooshed
+- [Unity 2020.3.28f1](https://unity.com/releases/editor/whats-new/2020.3.28f1)
+- [PolyHook 2](https://github.com/stevemk14ebr/PolyHook_2_0)
+- [Console & Logger](https://github.com/Pxcket/Lunacy-RR-Internal/tree/main/src/utils)
+- [imgui](https://github.com/ocornut/imgui)
+- [kiero](https://github.com/Rebzzel/kiero)
+- IL2CPP Exports Api (self made)
 ### Esp Showcase (simple written in 10 minutes)
 - soon when i get an friend to test
   
