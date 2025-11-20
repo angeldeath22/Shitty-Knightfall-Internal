@@ -1,4 +1,5 @@
-# Shitty Knightfall Internal i wrote for fun no harm against their devs :)
+# Shitty Knightfall Internal 
+i wrote **THIS ONLY FOR FUN** no harm against their devs :)
 
 # NOTE:
 there is some random crash when pressing the actual ingame buttons, i got no idea what causes it, but i think its the update loop
@@ -14,7 +15,6 @@ there is some random crash when pressing the actual ingame buttons, i got no ide
 - easy to expand or skid from
 - Many Cheat Features Ready To be Made, just not executed yet
 
-
 # Stuff Swooshed
 - [Unity 2020.3.28f1](https://unity.com/releases/editor/whats-new/2020.3.28f1)
 - [PolyHook 2](https://github.com/stevemk14ebr/PolyHook_2_0)
@@ -22,6 +22,7 @@ there is some random crash when pressing the actual ingame buttons, i got no ide
 - [imgui](https://github.com/ocornut/imgui)
 - [kiero](https://github.com/Rebzzel/kiero)
 - IL2CPP Exports Api (self made)
+
 ### Esp Showcase (simple written in 10 minutes)
 - soon when i get an friend to test
   
