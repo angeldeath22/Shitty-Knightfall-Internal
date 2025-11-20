@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b22367fa-89ed-4714-84c2-b65ed212ae12}</ProjectGuid>
+    <RootNamespace>HHook</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>.\build</OutDir>
+    <IntDir>.\build\junk</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;HHOOK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;HHOOK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;HHOOK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;HHOOK_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>S:\Stuff\! - Alias\scrt\Shitty-Knightfall-Internal\deps;S:\Stuff\! - Alias\scrt\Shitty-Knightfall-Internal\src\utils\math;C:\Program Files\Unity\Hub\Editor\2020.3.28f1\Editor\Data\il2cpp\libil2cpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="deps\imgui\imgui.cpp" />
+    <ClCompile Include="deps\imgui\imgui_demo.cpp" />
+    <ClCompile Include="deps\imgui\imgui_draw.cpp" />
+    <ClCompile Include="deps\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="deps\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="deps\imgui\imgui_tables.cpp" />
+    <ClCompile Include="deps\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="deps\kiero\kiero.cpp" />
+    <ClCompile Include="deps\kiero\minhook\src\buffer.c" />
+    <ClCompile Include="deps\kiero\minhook\src\hde\hde32.c" />
+    <ClCompile Include="deps\kiero\minhook\src\hde\hde64.c" />
+    <ClCompile Include="deps\kiero\minhook\src\hook.c" />
+    <ClCompile Include="deps\kiero\minhook\src\trampoline.c" />
+    <ClCompile Include="src\features\ESP.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\core\Application.cpp" />
+    <ClCompile Include="src\core\System.cpp" />
+    <ClCompile Include="src\render\directx\Device.cpp" />
+    <ClCompile Include="src\render\directx\DirectX11.cpp" />
+    <ClCompile Include="src\render\directx\Renderer.cpp" />
+    <ClCompile Include="src\render\interface\Menu.cpp" />
+    <ClCompile Include="src\render\interface\PlayerList.cpp" />
+    <ClCompile Include="src\render\Overlay.cpp" />
+    <ClCompile Include="src\sdk\funcs.cpp" />
+    <ClCompile Include="src\sdk\game\Game\GamePlayer.cpp" />
+    <ClCompile Include="src\sdk\game\Game\GM_Lobby.cpp" />
+    <ClCompile Include="src\sdk\game\Photon\PhotonNetwork.cpp" />
+    <ClCompile Include="src\sdk\game\Photon\PhotonPlayer.cpp" />
+    <ClCompile Include="src\sdk\game\Photon\PhotonServerConnector.cpp" />
+    <ClCompile Include="src\sdk\game\Photon\PhotonView.cpp" />
+    <ClCompile Include="src\sdk\game\PlayerCache.cpp" />
+    <ClCompile Include="src\sdk\game\PlayerHandler.cpp" />
+    <ClCompile Include="src\sdk\game\UnityEngine\Cursor.cpp" />
+    <ClCompile Include="src\sdk\game\UnityEngine\UnityEngine.cpp" />
+    <ClCompile Include="src\sdk\IL2CPP\il2cpp-api.cpp" />
+    <ClCompile Include="src\update\GameLoop.cpp" />
+    <ClCompile Include="src\utils\CMD\Logger.cpp" />
+    <ClCompile Include="src\utils\Config.cpp" />
+    <ClCompile Include="src\utils\HookManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="deps\imgui\imconfig.h" />
+    <ClInclude Include="deps\imgui\imgui.h" />
+    <ClInclude Include="deps\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="deps\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="deps\imgui\imgui_internal.h" />
+    <ClInclude Include="deps\imgui\imstb_rectpack.h" />
+    <ClInclude Include="deps\imgui\imstb_textedit.h" />
+    <ClInclude Include="deps\imgui\imstb_truetype.h" />
+    <ClInclude Include="deps\kiero\kiero.h" />
+    <ClInclude Include="deps\kiero\minhook\include\MinHook.h" />
+    <ClInclude Include="deps\kiero\minhook\src\buffer.h" />
+    <ClInclude Include="deps\kiero\minhook\src\hde\hde32.h" />
+    <ClInclude Include="deps\kiero\minhook\src\hde\hde64.h" />
+    <ClInclude Include="deps\kiero\minhook\src\hde\pstdint.h" />
+    <ClInclude Include="deps\kiero\minhook\src\hde\table32.h" />
+    <ClInclude Include="deps\kiero\minhook\src\hde\table64.h" />
+    <ClInclude Include="deps\kiero\minhook\src\trampoline.h" />
+    <ClInclude Include="deps\typedef.h" />
+    <ClInclude Include="src\core\Application.hpp" />
+    <ClInclude Include="src\core\System.hpp" />
+    <ClInclude Include="src\features\ESP.hpp" />
+    <ClInclude Include="src\features\Exploits.hpp" />
+    <ClInclude Include="src\render\directx\Device.hpp" />
+    <ClInclude Include="src\render\directx\DirectX11.hpp" />
+    <ClInclude Include="src\render\directx\Renderer.hpp" />
+    <ClInclude Include="src\render\interface\Menu.hpp" />
+    <ClInclude Include="src\render\interface\PlayerList.hpp" />
+    <ClInclude Include="src\render\Overlay.hpp" />
+    <ClInclude Include="src\render\resources\font.hpp" />
+    <ClInclude Include="src\sdk\funcs.hpp" />
+    <ClInclude Include="src\sdk\game\BonesType.hpp" />
+    <ClInclude Include="src\sdk\game\Game\GamePlayer.hpp" />
+    <ClInclude Include="src\sdk\game\Game\GM_Lobby.hpp" />
+    <ClInclude Include="src\sdk\game\Photon\PhotonNetwork.hpp" />
+    <ClInclude Include="src\sdk\game\Photon\PhotonPlayer.hpp" />
+    <ClInclude Include="src\sdk\game\Photon\PhotonServerConnector.hpp" />
+    <ClInclude Include="src\sdk\game\Photon\PhotonView.hpp" />
+    <ClInclude Include="src\sdk\game\PlayerCache.hpp" />
+    <ClInclude Include="src\sdk\game\PlayerData.hpp" />
+    <ClInclude Include="src\sdk\game\PlayerHandler.hpp" />
+    <ClInclude Include="src\sdk\game\UnityEngine\Cursor.hpp" />
+    <ClInclude Include="src\sdk\game\UnityEngine\UnityEngine.hpp" />
+    <ClInclude Include="src\features\Toggles.hpp" />
+    <ClInclude Include="src\sdk\IL2CPP\il2cpp-api.hpp" />
+    <ClInclude Include="src\sdk\offsets.hpp" />
+    <ClInclude Include="src\sdk\game\Player.hpp" />
+    <ClInclude Include="src\sdk\structs.hpp" />
+    <ClInclude Include="src\update\GameLoop.hpp" />
+    <ClInclude Include="src\utils\CMD\Logger.hpp" />
+    <ClInclude Include="src\utils\Config.hpp" />
+    <ClInclude Include="src\utils\HookManager.hpp" />
+    <ClInclude Include="src\utils\math\math.hpp" />
+    <ClInclude Include="src\utils\math\MathCommon.hpp" />
+    <ClInclude Include="src\utils\math\Matrix3x3.hpp" />
+    <ClInclude Include="src\utils\math\Matrix4x4.hpp" />
+    <ClInclude Include="src\utils\math\Quaternion.hpp" />
+    <ClInclude Include="src\utils\math\Vector2.hpp" />
+    <ClInclude Include="src\utils\math\Vector3.hpp" />
+    <ClInclude Include="src\utils\math\Vector4.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="deps\kiero\minhook\dll_resources\MinHook.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="deps\kiero\minhook\dll_resources\MinHook.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
